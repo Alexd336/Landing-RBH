@@ -1,0 +1,41 @@
+
+// Breakpoints
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm  { @media (min-width: 576px)  { @content; } }
+  @else if $breakpoint == md { @media (min-width: 768px)  { @content; } }
+  @else if $breakpoint == lg { @media (min-width: 992px)  { @content; } }
+  @else if $breakpoint == xl { @media (min-width: 1200px) { @content; } }
+}
+
+// Animaciones
+$default-duration: 0.8s;
+$default-ease: ease-out;
+
+@mixin fade-slide($direction: up, $distance: 20px, $duration: $default-duration) {
+  opacity: 0;
+  transform:
+    translateY(if($direction == up,    $distance, if($direction == down, -$distance, 0)))
+    translateX(if($direction == left,  $distance, if($direction == right, -$distance, 0)));
+  animation: fadeSlideIn $duration $default-ease forwards;
+}
+@keyframes fadeSlideIn {
+  to { opacity: 1; transform: translateY(0) translateX(0); }
+}
+
+@mixin parallax-bg($intensity: 0.3) {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(0);
+  will-change: background-position;
+}
+
+
+// Mixin Glassmorphism
+@mixin glass {
+  background: $glass-bg;
+  backdrop-filter: blur(10px);
+  border: 1px solid $glass-border;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}

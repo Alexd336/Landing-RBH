@@ -1,0 +1,114 @@
+
+
+
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 100px;
+  color: $text-color;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+  }
+}
+
+// Text content
+.text-content {
+  h2 {
+    font-size: 3rem;
+    margin: 0;
+    line-height: 1.2;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+}
+
+// Form styles
+.contact-form {
+   @include glass;   
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  label {
+    font-size: 0.9rem;
+    color: $input-border-color;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid $input-border-color;
+    border-radius: 5px;
+    background: transparent;
+    color: $text-color;
+    font-size: 1rem;
+    width: 300px;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  textarea {
+    height: 100px;
+    resize: none;
+  }
+
+  .info {
+    font-size: 0.8rem;
+    color: $input-border-color;
+    margin-top: 10px;
+    a {
+      color: $input-border-color;
+      text-decoration: none;
+    }
+  }
+
+  button {
+     @include glass;   
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: $button-bg;
+    color: $button-text;
+    font-size: 1rem;
+    cursor: pointer;
+    width: fit-content;
+    align-self: flex-end;
+
+    @media (max-width: 768px) {
+      align-self: center;
+    }
+
+    &:hover {
+      background-color: darken($button-bg, 10%);
+    }
+  }
+}
+
+// STATUS 
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.8rem;
+  margin-top: -8px;
+  margin-bottom: 8px;
+}
+
+.input-error {
+  border-color: #fc887c !important;
+}
+
+.success-message {
+  margin-top: 1rem;
+  color: #50dae7;
+  font-weight: bold;
+  text-align: center;
+}

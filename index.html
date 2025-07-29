@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mobile Essentials</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    
+<header class="nav" id="mainNav" >
+    <div class="nav__primary" class="navfx">
+    <div class="nav__logo"><img src="Assets/logoRBH (1).png" width="70px" alt=""></div>
+    <nav class="nav__menu">
+       
+    </nav>
+    <div class="nav__icon">
+        <div class="nav__grid-icon">
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+        <span></span><span></span><span></span>
+        </div>
+    </div>
+    </div>
+
+    <div class="nav__dropdown">
+    <div class="nav__logo"><img src="Assets/logoRBH (1).png" width="70px" alt=""></div>
+    <ul class="nav__list">
+        
+        <li><a href="#contactar">Contáctanos</a></li>
+        <li><a href="#servicios">SERVICIOS</a></li>
+        <li><a href="https://wa.me/5217471234567?text=Hola%20quiero%20más%20información" target="_blank">💬 Habla con un asesor ahora</a></li>
+
+    </ul>
+    <div class="nav__footer">
+        <div class="nav__social">
+        <a href="#">INSTAGRAM</a>
+        <a href="#">THREADS</a>
+        <a href="#">LINKEDIN</a>
+    </div>
+        <span class="nav__time">00:00 NY</span>
+    </div>
+    </div>
+</header>
+
+    <!-- Video de fondo -->
+<section class="hero">
+    <video class="hero__video" autoplay loop muted playsinline src="Assets/VD/MAINRBHVIDEO.mp4" type="video/mp4">
+    </video>
+</section>
+
+    <!-- Contenido del hero sobre el video -->
+<div class="hero__content">
+        <h1>Todo para tu móvil, en un solo lugar.</h1>
+        <p>En RBH conectamos, reparamos y potenciamos tu experiencia móvil con soluciones rápidas, seguras y sin complicaciones.</p>
+        <a href="#contactar" class="btn btn-primary">🚀 ¡Quiero mi solución ahora!</a>
+
+</div>
+
+
+    <main class="container">
+
+
+    <!-- SECTION SERVICIOS-->
+<section class="product-scroll" id="servicios">
+    <!-- Texto fijo que acompaña -->
+    <div class="product-scroll__text-sticky">
+        <h1 class="product__title">Servicios que te mantienen conectado</h1>
+        <p class="product__subtitle">
+        Desde <strong>reparaciones express</strong> hasta <strong>accesorios</strong> de <strong>última generación</strong>, cuidamos cada detalle de tu <strong>experiencia móvil</strong>.  
+        <br><a href="#contactar" class="cta-link">📲 Agenda tu servicio →</a>
+</p>
+
+  </div>
+
+  <!-- Wrapper de imágenes scrollables -->
+  <div class="product-scroll__wrapper">
+    <div class="product-scroll__item" data-index="0">
+      <img src="Assets/Img/servicios/Portabilidad.png" alt="Portabilidad" />
+    </div>
+    <div class="product-scroll__item" data-index="1">
+      <img src="Assets/Img/servicios/Remplazos.png" alt="SIM Movistar" />
+    </div>
+    <div class="product-scroll__item" data-index="2">
+      <img src="Assets/Img/servicios/Gadgets.png" alt="Accesorios" />
+    </div>
+    <div class="product-scroll__item" data-index="3">
+      <img src="Assets/Img/servicios/Reparaciones.png" alt="Reparaciones" />
+    </div>
+    <div class="product-scroll__item" data-index="4">
+      <img src="Assets/Img/servicios/Reparaciones.png" alt="Desbloqueo" />
+    </div>
+  </div>
+</section>
+
+
+    <!-- Contactar -->
+
+    <section class="section" id="contactar">
+        
+    <div class="contact-form">
+    <h1>Hablemos de tu solución móvil</h1>
+    <p>Completa el formulario y uno de nuestros asesores te responderá en minutos.</p>
+<form id="contactForm" novalidate>
+    <label for="name">Nombre</label>
+    <input type="text" id="name" name="name" placeholder="Tu nombre completo">
+    <label for="email">Correo electrónico</label>
+    <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com">
+    <label for="message">Cuéntanos qué necesitas</label>
+    <textarea id="message" name="message" placeholder="Ej. Necesito reparar mi pantalla..."></textarea>
+    <button type="submit">✨ Enviar mensaje</button>
+</form>
+
+</div>
+    <div class="contact-info">
+        <h3>OFFICE</h3>
+        <p>12 Nyhavn Street,<br>Copenhagen, Denmark, 1051</p>
+        <h3>REQUESTS</h3>
+        <p>hello@monologue.com</p>
+        <h3>PHONE</h3>
+        <p>020 3176 2093</p>
+        <h3>SOCIALS</h3>
+        <p>Instagram<br>Threads<br>X.com</p>
+    </div>
+</section>
+
+</main>
+
+<!-- Botón Flotante WhatsApp -->
+<a href="https://wa.me/5217471234567?text=Hola%20quiero%20más%20información" 
+   class="whatsapp-float" 
+   target="_blank" 
+   aria-label="Chatea con nosotros por WhatsApp">
+   <img src="Assets/whatsapp-icon.png" alt="WhatsApp" />
+</a>
+
+
+
+<footer class="footer-modern">
+    <div class="footer-modern__left">
+    <img src="Assets/logoRBH (1).png" alt="RBH Logo" class="footer-modern__logo">
+    <h3>🚀 Únete a la comunidad RBH y lleva tu móvil al siguiente nivel.</h3>
+    <a href="#contactar" class="footer-modern__cta">Habla con nosotros  →</a>
+    </div>
+
+    <div class="footer-modern__middle">
+    <h4>PAGES</h4>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Portabilidad</a></li>
+        <li><a href="#">Reparaciones</a></li>
+        <li><a href="#">Accesorios</a></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+    </div>
+
+    <div class="footer-modern__right">
+    <h4>SOCIALS</h4>
+    <ul>
+        <li><a href="#">Instagram ↗</a></li>
+        <li><a href="#">Threads ↗</a></li>
+        <li><a href="#">LinkedIn ↗</a></li>
+    </ul>
+    </div>
+
+    <div class="footer-modern__bottom">
+    <p>© 2025 RBH. Todos los derechos reservados.</p>
+    <div>
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Use</a>
+    </div>
+    </div>
+</footer>
+
+    
+</body>
+<script src="JS/script.js"></script>
+<script src="JS/servicios.js"></script>
+<script src="JS/nosotros.js"></script>
+<script src="JS/faq.js"></script>
+<script src="JS/contactar.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+</html>

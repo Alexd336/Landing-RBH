@@ -1,0 +1,127 @@
+.glass {
+   @include glass;   
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.services__logos {
+  img {
+    max-width: 80px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+
+    /* Contenedor principal del hero */
+    .hero {
+       @include glass;   
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Video de fondo responsivo */
+    .hero__video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    /* Contenido del hero sobre el video */
+    .hero__content {
+       @include glass;   
+      position: absolute;
+      top: 85%;
+      right: 20%;
+      transform: translateY(-50%);
+      width: 60%;
+      z-index: 1;
+      color: #fff;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    /* Estilos de texto y botones */
+    .hero__content h1 {
+      color: #fff;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero__content p {
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
+    .hero__content .btn {
+      display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(6px);
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+    }
+    .hero__content .btn:hover {
+       background: rgba(255,255,255,0.35);
+    transform: translateY(-2px);
+    }
+
+    /* Responsive para pantallas medianas */
+    @media (max-width: 1024px) {
+      .hero__content {
+        width: 40%;
+        right: 5%;
+      }
+      .hero__content h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* Responsive para pantallas pequeñas */
+    @media (max-width: 768px) {
+      .hero__content {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        width: 90%;
+        margin: 20px auto;
+        text-align: center;
+      }
+      .hero__content h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* Responsive extra para móviles muy pequeños */
+    @media (max-width: 480px) {
+      .hero__content h1 {
+        font-size: 1.75rem;
+      }
+      .hero__content p {
+        font-size: 0.9rem;
+      }
+      .hero__content .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
