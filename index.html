@@ -1,53 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<!--
+  Se actualizó la cabecera del documento para evitar duplicados y mejorar la
+  estructura semántica. Se unificaron las etiquetas <title> y <meta> para
+  descripción y palabras clave, se añadió una etiqueta canonical y se cambió
+  el idioma del documento a español.
+-->
+<html lang="es">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Título único y descriptivo -->
+    <title>RBH · Soluciones express para tu móvil | Portabilidad, accesorios y reparaciones</title>
 
-    <title>RBH · Soluciones Express para tu Móvil | Portabilidad, Accesorios y Reparaciones</title>
-    <!-- SEO: descripción y keywords -->
-    <meta name="description"
-        content="RBH ofrece portabilidad, accesorios de última generación y reparaciones express para tu móvil. Soluciones seguras y rápidas en un solo lugar." />
-    <meta name="keywords" content="portabilidad móvil, accesorios smartphone, reparación express, desbloqueo, RBH" />
-
-    <!-- Open Graph para compartir en redes -->
-    <meta property="og:title" content="RBH · Todo para tu móvil, en un solo lugar" />
-    <meta property="og:description"
-        content="Portabilidad, reparación y accesorios. Servicio express y asesoría personalizada." />
-    <meta property="og:image" content="https://landrbh.netlify.app/Assets/og-image.jpg" />
-    <meta property="og:url"   content="https://landrbh.netlify.app/" />
-    <meta property="og:type"  content="website" />
-
-    <link rel="preload" href="https://fonts.gstatic.com/…" as="font" type="font/woff2" crossorigin>
-
-    <meta name="description" content="RBH ofrece reparaciones móviles, portabilidad y accesorios de última generación para mejorar tu experiencia. Contáctanos y conecta sin límites." />
-    <meta name="keywords" content="reparaciones móviles, portabilidad, accesorios, desbloqueo, gadgets, RBH" />
+    <!-- Meta descripción y palabras clave -->
+    <meta name="description" content="RBH ofrece portabilidad, reparaciones express y accesorios de última generación para tu móvil. Conecta, repara y potencia tu dispositivo con soluciones rápidas y seguras." />
+    <meta name="keywords" content="portabilidad móvil, reparación express, accesorios smartphone, desbloqueo, gadgets, RBH" />
     <meta name="robots" content="index, follow" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Mobile Essentials" />
-    <meta property="og:description" content="RBH ofrece reparaciones móviles, portabilidad y accesorios de última generación para mejorar tu experiencia. Contáctanos y conecta sin límites." />
-    <meta property="og:image" content="Assets/logoRBH (1).png" />
-    <meta property="og:url" content="https://example.com" />
-    <title>Mobile Essentials</title>
 
+    <!-- Etiqueta canonical para evitar contenido duplicado -->
+    <link rel="canonical" href="https://landrbh.netlify.app/" />
+
+    <!-- Open Graph para compartir en redes sociales -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RBH · Todo para tu móvil, en un solo lugar" />
+    <meta property="og:description" content="Portabilidad, reparación y accesorios de última generación. Servicio express y asesoría personalizada." />
+    <meta property="og:image" content="https://landrbh.netlify.app/Assets/og-image.jpg" />
+    <meta property="og:url" content="https://landrbh.netlify.app/" />
+    
+    <!-- Carga de fuentes optimizada -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" as="style" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Estilos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
-    <link rel="stylesheet" href="styles/main.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    </head>
+    <!-- Usamos la versión minificada de nuestros estilos para reducir la transferencia y mejorar la velocidad de carga -->
+    <link rel="stylesheet" href="styles/main.min.css" />
+  </head>
     <body>
     
 <header class="nav" id="mainNav" >
     <div class="nav__primary" class="navfx">
 
-    <div class="nav__logo"><img src="Assets/logoRBH.webp" loading="lazy" width="70px" alt=""></div>
+    <!-- Añadimos un texto alternativo descriptivo al logotipo para mejorar SEO y accesibilidad -->
+    <div class="nav__logo"><img src="Assets/logoRBH.webp" loading="lazy" width="70px" alt="Logotipo de RBH"></div>
 
-    <div class="nav__logo"><img src="Assets/logoRBH (1).png" width="70px" alt="RBH Logo"></div>
+    
 
     <nav class="nav__menu">
     
     </nav>
     <div class="nav__icon">
-        <div class="nav__grid-icon">
+        <!-- Convertimos el icono en un elemento accesible. El atributo role="button" y tabindex
+             permiten que los usuarios de teclado lo utilicen; aria-label describe su propósito. -->
+        <div class="nav__grid-icon" role="button" tabindex="0" aria-label="Abrir menú">
         <span></span><span></span><span></span>
         <span></span><span></span><span></span>
         <span></span><span></span><span></span>
@@ -61,7 +69,7 @@
         
         <li><a href="#contactar">Contáctanos</a></li>
         <li><a href="#servicios">SERVICIOS</a></li>
-        <li><a href="https://wa.me/5217471234567?text=Hola%20quiero%20más%20información" target="_blank" rel="noopener">💬 Habla con un asesor ahora</a></li>
+        <li><a href="https://wa.me/5217471234567?text=Hola%20quiero%20más%20información" target="_blank" rel="noopener noreferrer nofollow">💬 Habla con un asesor ahora</a></li>
 
     </ul>
     <div class="nav__footer">
@@ -161,7 +169,7 @@
 <!-- Botón Flotante WhatsApp -->
 <a href="https://wa.me/5217471234567?text=Hola%20quiero%20más%20información" 
    class="whatsapp-float" 
-   target="_blank" rel="noopener" 
+   target="_blank" rel="noopener noreferrer nofollow" 
    aria-label="Chatea con nosotros por WhatsApp">
    <img src="Assets/whatsapp-icon.webp" loading="lazy" alt="WhatsApp" />
 </a>
@@ -207,11 +215,12 @@
 
     
 </body>
-<script src="JS/script.js" defer></script>
-<script src="JS/servicios.js" defer></script>
-<script src="JS/nosotros.js" defer></script>
-<script src="JS/faq.js" defer></script>
-<script src="JS/contactar.js" defer></script>
+    <!-- Cargamos versiones minificadas de nuestros scripts para mejorar el tiempo de carga. -->
+    <script src="JS/script.min.js" defer></script>
+    <script src="JS/servicios.min.js" defer></script>
+    <script src="JS/nosotros.min.js" defer></script>
+    <script src="JS/faq.min.js" defer></script>
+    <script src="JS/contactar.min.js" defer></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 
