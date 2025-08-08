@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="image" href="Assets/Img/servicios/Portabilidad.webp" fetchpriority="high">
+
     <title>RBH · Soluciones Express para tu Móvil | Portabilidad, Accesorios y Reparaciones</title>
     <!-- SEO: descripción y keywords -->
     <meta name="description"
@@ -26,12 +33,14 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Mobile Essentials" />
     <meta property="og:description" content="RBH ofrece reparaciones móviles, portabilidad y accesorios de última generación para mejorar tu experiencia. Contáctanos y conecta sin límites." />
-    <meta property="og:image" content="Assets/logoRBH (1).png" />
+    <meta property="og:image" content="Assets/logoRBH.webp" />
     <meta property="og:url" content="https://example.com" />
     <title>Mobile Essentials</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"></noscript>
+    <link rel="preload" as="style" href="styles/main.min.css" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles/main.min.css"></noscript>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -39,9 +48,9 @@
 <header class="nav" id="mainNav" >
     <div class="nav__primary" class="navfx">
 
-    <div class="nav__logo"><img src="Assets/logoRBH.webp" loading="lazy" width="70px" alt=""></div>
+    <div class="nav__logo"><img src="Assets/logoRBH.webp" width="500" height="500" decoding="async" loading="eager" sizes="70px" alt="RBH Logo"></div>
 
-    <div class="nav__logo"><img src="Assets/logoRBH (1).png" width="70px" alt="RBH Logo"></div>
+    <div class="nav__logo"><img src="Assets/logoRBH.webp" width="500" height="500" decoding="async" loading="eager" sizes="70px" alt="RBH Logo"></div>
 
     <nav class="nav__menu">
     
@@ -56,7 +65,7 @@
     </div>
 
     <div class="nav__dropdown">
-    <div class="nav__logo"><img src="Assets/logoRBH (1).png" width="70px" alt="RBH Logo"></div>
+    <div class="nav__logo"><img src="Assets/logoRBH.webp" width="500" height="500" decoding="async" loading="lazy" sizes="70px" alt="RBH Logo"></div>
     <ul class="nav__list">
         
         <li><a href="#contactar">Contáctanos</a></li>
@@ -77,8 +86,7 @@
 
     <!-- Video de fondo -->
 <section class="hero">
-    <video class="hero__video" autoplay loop muted playsinline src="Assets/VD/MAINRBHVIDEO.mp4" type="video/mp4">
-    </video>
+    <video class="hero__video" autoplay loop muted playsinline data-src="Assets/VD/MAINRBHVIDEO.mp4" type="video/mp4" poster="Assets/Img/servicios/Portabilidad.webp"></video>
 </section>
 
     <!-- Contenido del hero sobre el video -->
@@ -108,19 +116,19 @@
   <!-- Wrapper de imágenes scrollables -->
   <div class="product-scroll__wrapper">
     <div class="product-scroll__item" data-index="0">
-      <img src="Assets/Img/servicios/Portabilidad.webp" loading="lazy" alt="Portabilidad" />
+      <img src="Assets/Img/servicios/Portabilidad.webp" width="1024" height="1536" decoding="async" loading="lazy" sizes="(max-width:768px) 100vw, 50vw" alt="Portabilidad" />
     </div>
     <div class="product-scroll__item" data-index="1">
-      <img src="Assets/Img/servicios/Remplazos.webp" loading="lazy" alt="SIM Movistar" />
+      <img src="Assets/Img/servicios/Remplazos.webp" width="1024" height="1536" decoding="async" loading="lazy" sizes="(max-width:768px) 100vw, 50vw" alt="SIM Movistar" />
     </div>
     <div class="product-scroll__item" data-index="2">
-      <img src="Assets/Img/servicios/Gadgets.webp" loading="lazy" alt="Accesorios" />
+      <img src="Assets/Img/servicios/Gadgets.webp" width="1024" height="1536" decoding="async" loading="lazy" sizes="(max-width:768px) 100vw, 50vw" alt="Accesorios" />
     </div>
     <div class="product-scroll__item" data-index="3">
-      <img src="Assets/Img/servicios/Reparaciones.webp" loading="lazy" alt="Reparaciones" />
+      <img src="Assets/Img/servicios/Reparaciones.webp" width="1024" height="1536" decoding="async" loading="lazy" sizes="(max-width:768px) 100vw, 50vw" alt="Reparaciones" />
     </div>
     <div class="product-scroll__item" data-index="4">
-      <img src="Assets/Img/servicios/Desbloqueo.webp" loading="lazy" alt="Desbloqueo" />
+      <img src="Assets/Img/servicios/Desbloqueo.webp" width="1024" height="1536" decoding="async" loading="lazy" sizes="(max-width:768px) 100vw, 50vw" alt="Desbloqueo" />
     </div>
   </div>
 </section>
@@ -159,18 +167,18 @@
 </main>
 
 <!-- Botón Flotante WhatsApp -->
-<a href="https://wa.me/5217471234567?text=Hola%20quiero%20más%20información" 
-   class="whatsapp-float" 
-   target="_blank" rel="noopener" 
+<a href="https://wa.me/5217471234567?text=Hola%20quiero%20más%20información"
+   class="whatsapp-float"
+   target="_blank" rel="noopener"
    aria-label="Chatea con nosotros por WhatsApp">
-   <img src="Assets/whatsapp-icon.webp" loading="lazy" alt="WhatsApp" />
+   <img src="Assets/whatsapp-icon.webp" width="225" height="225" decoding="async" loading="lazy" sizes="64px" alt="WhatsApp" />
 </a>
 
 
 
 <footer class="footer-modern">
     <div class="footer-modern__left">
-    <img src="Assets/logoRBH.webp" loading="lazy" alt="RBH Logo" class="footer-modern__logo">
+    <img src="Assets/logoRBH.webp" width="500" height="500" decoding="async" loading="lazy" sizes="(max-width:768px) 150px, 150px" alt="RBH Logo" class="footer-modern__logo">
     <h3>🚀 Únete a la comunidad RBH y lleva tu móvil al siguiente nivel.</h3>
     <a href="#contactar" class="footer-modern__cta">Habla con nosotros  →</a>
     </div>
@@ -207,12 +215,13 @@
 
     
 </body>
+<script src="JS/hero-video.js" defer></script>
 <script src="JS/script.js" defer></script>
 <script src="JS/servicios.js" defer></script>
 <script src="JS/nosotros.js" defer></script>
 <script src="JS/faq.js" defer></script>
 <script src="JS/contactar.js" defer></script>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js" defer></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js" defer></script>
 
 </html>
