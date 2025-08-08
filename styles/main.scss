@@ -5,6 +5,9 @@
 @import 'base/reset';
 @import 'base/typography';
 
+:root {
+  font-synthesis: weight style small-caps;
+}
 
 // Components
 
@@ -16,5 +19,21 @@
 @import 'components/components';
 @import 'components/contactar';
 @import 'components/botonFlotante';
+
+// sizing for logo images
+.nav__logo img {
+  width: 70px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .hero__video {
+    display: none;
+  }
+  .hero {
+    background: url('../Assets/Img/servicios/Portabilidad.webp') center/cover no-repeat;
+    min-height: 60vh;
+  }
+}
 
 
